@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      name: config-server
+      server:
+        git:
+          uri: https://github.com/kpo-seminars/seminar-18-config.git
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    registry-fetch-interval-seconds: 5
